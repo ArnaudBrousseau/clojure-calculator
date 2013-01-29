@@ -1,0 +1,18 @@
+# Functional calculator
+
+This app is a simple calculator written in Clojure. It's also my first try at
+functional web programming. (I've done some to solve trivial algorithmic
+problems...but web programming brings a whole different class of problems)
+
+## Usage example
+
+/add?args=1,2,-30,5,
+/subtract?args=30,5,8
+/multiply?args=20,4,-1
+(no, it doesn't work yet)
+
+## License
+
+Copyright (C) 2013 Arnaud Brousseau
+
+Distributed under the Eclipse Public License, the same as Clojure.
