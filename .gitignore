@@ -5,4 +5,7 @@
 /native
 /.lein-failures
 /checkouts
-/.lein-deps-sum
+/target
+/pom.xml
+/.lein-*
+/.env
