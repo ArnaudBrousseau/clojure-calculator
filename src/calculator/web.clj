@@ -2,8 +2,23 @@
   (:use [ring.adapter.jetty :only [run-jetty]]
         [clojure.string :only [split]]))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Those are the available functions
+
 (defn add [& numbers]
   (apply + numbers))
+
+(defn subtract [& numbers]
+  (apply - numbers))
+
+(defn divide [& numbers]
+  (apply / numbers))
+
+(defn multiply [& numbers]
+  (apply * numbers))
+
+;;;;;;;;;;;;;;;;;;;
+;This is the webapp
 
 (defn parse-uri [uri]
   (apply str (let [[_ & func-name] uri] func-name)))
@@ -33,9 +48,16 @@
      (if (= uri "/")
        ; "Home" page
        (apply str (concat
+         "------------------------------\n"
          "Welcome to Clojure Calculator!\n"
          "------------------------------\n"
-         "Try /add?args=2,2"))
+         "\n"
+         "Try the following:\n"
+         "* /add?args=1,2,-30,5\n"
+         "* /subtract?args=30,5,8\n"
+         "* /multiply?args=20,4,-1\n"
+         "* /divide?args=30,4\n"))
+       ; If we've got somthin', compute!
        (compute uri qs)))})
 
 (defn -main [port]

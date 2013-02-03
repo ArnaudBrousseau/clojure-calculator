@@ -15,8 +15,7 @@ Go to http://clojure-calculator.herokuapp.com
 1. /add?args=1,2,-30,5,
 2. /subtract?args=30,5,8
 3. /multiply?args=20,4,-1
-
-For now, only the first example works properly.
+3. /divide?args=20,4
 
 ## License
 
